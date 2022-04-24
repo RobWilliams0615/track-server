@@ -1,7 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
+
+app.use(authRoutes);
+
 const mongoUri =
   'mongodb+srv://admin:7RPR2%40Ht%40gvbb8g@cluster0.vt6lw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 //above is percentencoded
